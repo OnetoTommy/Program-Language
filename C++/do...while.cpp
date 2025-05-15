@@ -46,19 +46,62 @@ int main()
   //   cout << endl;
   // }
 
-  // Break
-  int num = 0;
-  cout << "Please select the options" << endl;
-  cin >> num;
-  switch (num)
-  {
-  case 1:
-    cout << "Hello World" << endl;
-    break;
+  // // Break
+  // int num = 0;
+  // cout << "Please select the options" << endl;
+  // cin >> num;
+  // switch (num)
+  // {
+  // case 1:
+  //   cout << "Hello World" << endl;
+  //   break;
 
-  default:
-    cout << "Hello Campus" << endl;
-    break;
+  // default:
+  //   cout << "Hello Campus" << endl;
+  //   break;
+  // }
+
+  // // goto
+  // cout << 1 << endl;
+  // goto Flag;
+  // cout << 2 << endl;
+  // Flag:
+  // cout << 3 << endl;
+
+  // // Array:相同的类型数据元素；连续的内存位置
+  // double num[10];
+  // int arr2[3] = {1,2,3};
+  // int arr3[] = {1,2,3,4,5};
+  // cout << sizeof(num) << endl; //space for every byte
+  // cout << (uintptr_t)arr3 << endl;
+  // cout << &arr3[0] << endl;
+
+  // // Example
+  // int arr[7] = {3,4,5,6,8,1,10};
+  // int res = 0;
+  // for(int i = 0; i < 7; i++){
+  //   if (arr[i] >= res)
+  //   {
+  //   res = arr[i];
+  //   }
+  // }
+  // cout << res << endl;
+
+  // Example
+  int arr1[7] = {3,4,5,6,8,1,10};
+  int l = 0;
+  int r = 6;
+  while (l < r)
+  {
+    int temp = arr1[l];
+    arr1[l] = arr1[r];
+    arr1[r] = temp;
+    l++;
+    r--;
+  }
+  for(int i = 0; i < 7; i++)
+  {
+    cout << arr1[i] << endl;
   }
 
   system("pause");
