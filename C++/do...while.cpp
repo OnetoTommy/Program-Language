@@ -1,8 +1,40 @@
 #include <iostream>
+#include "head.h"
 using namespace std;
 
+// 函数声明
+// int get_sum(int a, int b)
+// {
+//   int sum = a + b;
+//   return sum;
+// };
+
+// int max(int a, int b)
+// {
+//   return a > b ? a : b;
+// }
 int main()
 {
+  int a = 10;
+  int * p;
+  p = &a;
+  // cout << &a << endl; 
+  // cout << p << endl;
+
+  * p = 1000;
+  cout << a << endl; 
+  cout << *p << endl;
+
+  cout << sizeof(p) << endl; // int * is also ok.
+  cout << sizeof(int *) << endl; // int * is also ok.
+  cout << sizeof(float *) << endl; // int * is also ok.
+  cout << sizeof(char *) << endl; // int * is also ok.
+  cout << sizeof(double *) << endl; // int * is also ok.
+
+
+  // // int sum = get_sum(a, b); 
+  // int sum = max(a, b); 
+  // cout << sum << endl;
   // // 用do...while method
   // int num = 100;
   // do
@@ -87,22 +119,25 @@ int main()
   // }
   // cout << res << endl;
 
-  // Example
-  int arr1[7] = {3,4,5,6,8,1,10};
-  int l = 0;
-  int r = 6;
-  while (l < r)
-  {
-    int temp = arr1[l];
-    arr1[l] = arr1[r];
-    arr1[r] = temp;
-    l++;
-    r--;
-  }
-  for(int i = 0; i < 7; i++)
-  {
-    cout << arr1[i] << endl;
-  }
+  // // Example
+  // int arr1[7] = {3,4,5,6,8,1,10};
+  // int l = 0;
+  // int r = 6;
+  // while (l < r)
+  // {
+  //   int temp = arr1[l];
+  //   arr1[l] = arr1[r];
+  //   arr1[r] = temp;
+  //   l++;
+  //   r--;
+  // }
+  // for(int i = 0; i < 7; i++)
+  // {
+  //   cout << arr1[i] << endl;
+  // }
+
+
+
 
   system("pause");
   return 0;
