@@ -34,16 +34,94 @@ int main(){
 
 
   // max math
-  double x = 1;
-  double y = 2;
+  // double x = 1;
+  // double y = 2;
   // double z = std::max(x, y); // std::min(x, y)
   // double l = std::pow(2, 4); // 2^4
   // double m = std::sqrt(9);
   // double n = std::abs(-1);
   //double z = round(3.99); // round 
-   double z = ceil(3.1); //round up
+  //  double z = ceil(3.1); //round up
   // double z = floor(3.99); //round down
-  std::cout << z << '\n';
+  // std::cout << z << '\n';
+
+  // double a;
+  // double b;
+  // double c;
+
+  // std::cout << "Enter side a:";
+  // std::cin >> a;
+
+  // std::cout << "Enter side b:";
+  // std::cin >> b;
+
+  // a = pow(a, 2);
+  // b = pow(b, 2);
+  // c = sqrt(a + b);
+  // std::cout << "side C: " << c;
+
+  // if statements = do something if a condition is true.
+  //                 if not, then don't do it.
+  // int age;
+  // std::cout << "Enter yout age";
+  // std::cin >> age;
+  // if(age <= 18){
+  //   std::cout << "Welcome";
+  // }
+
+
+  // // Switch
+  // int month;
+  // std::cout << "Enter yout month";
+  // std::cin >> month;
+
+  // switch (month)
+  // {
+  // case 1:
+  //   std::cout << "Monday";
+  //   break;
+  // case 2:
+  //   std::cout << "February";
+  //   break;
+  
+  // default:
+  //   break;
+  // }
+
+  // ternary operator ? : = replacement to an if/else statement
+  // condition ? expression1 : expression2
+  // int grade = 75;
+  // grade >= 60 ? std::cout << "Great" : std::cout << "Bad";
+
+  std::string name;
+  std::cout << "Enter your name: ";
+  std::getline(std::cin, name);
+
+  // name.clear();
+  name.insert(0, "@"); //insert char into the string
+  name.find(" "); //find the location of element
+  name.erase(0, 3); // delete from 0 to 2
+
+  if (name.length() > 12){
+    std::cout << "Your name can not be over 12 characters.";
+  }else if(name.empty()){
+    std::cout << name;
+    std::cout << "OK";
+  }else{
+    std::cout << name.at(1);
+    std::cout << "OK";
+  }
+
+
+  // && = and 
+  // || = or
+  //  ! = not
+
+
+  
+
+
+
 
 
   
