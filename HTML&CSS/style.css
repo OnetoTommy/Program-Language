@@ -1,6 +1,124 @@
 
+/* #container{
+  border: 2px solid
+}
+
+#container + p{
+  background-color: yellow;
+} */
+
+button{
+  background-color: aqua;
+}
+button:hover{
+  background-color: blueviolet;
+}
+button:active{
+  background-color: brown;
+}
+
+
+/* body{
+  background-image: url(image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+} */
+
+
+/* position */
+/* #box1{
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+  position: sticky;
+}
+
+#box2{
+  background-color: rgb(157, 20, 45);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50px;
+} */
+
+
+
+
+
+/* display */
+/* *{
+  box-sizing: border-box;
+}
+
+.container{
+  background-color: blue;
+  height: 100vh;
+}
+
+.box{
+  background-color: white;
+  border: 2px solid;
+  padding: 20px;
+  height: auto;
+  width: 50%;
+  float: left;
+  text-align: center;
+} */
+
+
+
+
+
+
+/* Overflow --visible/hidden/clip/scroll/auto//* overflow-clip-margin: 2px; */*/
+/* div{
+  border: 2px solid;
+  height: 75px;
+  overflow: auto;
+} */
+
+/* Float property */
+/* body{
+  display: flow-root;
+}
+#img1{
+  float: left;
+}
+#img{
+  float: right;
+} */
+
+
+/* margin */
+/* body{
+  margin: 0px;
+}
+
+.box{
+  border: 5px solid;
+  font-size: 5rem;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+}
+#box1{
+  background-color: red;
+ 
+}
+#box2{
+  background-color: blue;
+} */
+
+
+
+
+
+
 /* text-shadow and box-shadow */
-h1{
+/* h1{
   text-shadow: 3px 3px 7px hsl(270, 50%, 40%), -3px -3px 7px hsl(137, 50%, 40%);
 }
 #box{
@@ -8,7 +126,7 @@ h1{
   height: 100px;
   background-color: aqua;
   box-shadow: 3px 3px 10px hsl(0, 92%, 29%);
-}
+} */
 
 
 
