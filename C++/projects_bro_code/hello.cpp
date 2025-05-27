@@ -1,12 +1,68 @@
 #include <iostream>
+#include <ctime>
 
 
 // typedef std::string text_t;
 // typedef int num;
 // using text_t = std::string;
 // using num = int;
-
+void happy(){
+    std::cout << "Happy Birthday" << '\n';
+  }
 int main(){
+  // function = a block of reusable code
+  happy();
+
+  // Guess game
+  // int num;
+  // int guess;
+  // int tries;
+  // srand(time(NULL));
+  // num = rand() % 100 + 1;
+  // std::cout << "****Guessing Number*****" << '\n';
+  // do{
+  //   std::cout << "Enter a guess between 1 to 100" << '\n';
+  //   std::cin >> guess;
+  //   tries++;
+  //   if (guess > num){
+  //     std::cout << "larger" << '\n';
+  //   }else if (guess < num){
+  //     std::cout << "Lower" << '\n';
+  //   }
+  // }while (guess != num);
+  
+
+  // peseudo-random = not truly random
+  // srand(time(NULL));
+  // srand(time(0));
+
+  // int num = (rand() % 6) + 1;
+  
+  // switch (num)
+  // {
+  // case 1:
+  //   std::cout << "High" << '\n';
+  //   break;
+  // case 2:
+  //   std::cout << num << '\n';
+  //   break;
+  // case 3:
+  //   std::cout << num << '\n';
+  //   break;
+  // case 4:
+  //   std::cout << num << '\n';
+  //   break;
+  // case 5:
+  //   std::cout << num << '\n';
+  //   break;
+  // case 6:
+  //   std::cout << "Low" << '\n';
+  //   break;
+  // default:
+  //   break;
+  // }
+
+
   // Section2
   // const double pi = 3.14;
   // double r = 10;
@@ -93,24 +149,24 @@ int main(){
   // int grade = 75;
   // grade >= 60 ? std::cout << "Great" : std::cout << "Bad";
 
-  std::string name;
-  std::cout << "Enter your name: ";
-  std::getline(std::cin, name);
+  // std::string name;
+  // std::cout << "Enter your name: ";
+  // std::getline(std::cin, name);
 
-  // name.clear();
-  name.insert(0, "@"); //insert char into the string
-  name.find(" "); //find the location of element
-  name.erase(0, 3); // delete from 0 to 2
+  // // name.clear();
+  // name.insert(0, "@"); //insert char into the string
+  // name.find(" "); //find the location of element
+  // name.erase(0, 3); // delete from 0 to 2
 
-  if (name.length() > 12){
-    std::cout << "Your name can not be over 12 characters.";
-  }else if(name.empty()){
-    std::cout << name;
-    std::cout << "OK";
-  }else{
-    std::cout << name.at(1);
-    std::cout << "OK";
-  }
+  // if (name.length() > 12){
+  //   std::cout << "Your name can not be over 12 characters.";
+  // }else if(name.empty()){
+  //   std::cout << name;
+  //   std::cout << "OK";
+  // }else{
+  //   std::cout << name.at(1);
+  //   std::cout << "OK";
+  // }
 
 
   // && = and 
