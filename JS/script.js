@@ -1,10 +1,76 @@
+// type conversion = change the datatype of a value to another(string, number, booleans)
+// let age = window.prompt("How old are you?")
+// age = Number(age);
+// age += 1
+// console.log(age, typeof age);
+// let x = "pizza";
+// let y = "pizza";
+// let z = "pizza";
+
+// x = Number(x);
+// y = String(y);
+// z = Boolean(z);
+// console.log(x, typeof x);
+// console.log(y, typeof y);
+// console.log(z, typeof z);
+
+
+// how to accept user input
+// 1. easy way = window prompt
+// 2. professional way = html textbox
+// let username = window.prompt("What is your username?");
+// console.log(username);
+// let username;
+// document.getElementById("submit").onclick = function(){
+//   username = document.getElementById("username").value;
+// }
+// let username = window.prompt();
+// let username;
+// function Hello(){
+//   username = document.getElementById("username").value;
+//   document.getElementById("myH1").textContent =  `Hello ${username}`;
+// }
+
+// document.getElementById("submit").onclick = () => {
+//   username = document.getElementById("username").value;
+//   document.getElementById("myH1").innerHTML = `Hello ${username}`
+// }
+
+
+
+
+
+
+
+
+
+// operators = + / * -
+// let student = 31;
+// // student = student + 2;
+// // student += 3
+// // student /= 2
+// // student = student % 7;
+// // // student = student ** 2 //square or power
+// // student **= 2;
+
+// student++;
+// student--;
+
+
+// console.log(student);
+
+
+
+
+
+
 // Variable
-let fullName = "Bro Code";
-let age = 25;
-let student = false;
-document.getElementById("p1").textContent = `Your name is ${fullName}`;
-document.getElementById("p2").textContent = age;
-document.getElementById("p3").textContent = student;
+// let fullName = "Bro Code";
+// let age = 25;
+// let student = false;
+// document.getElementById("p1").textContent = `Your name is ${fullName}`;
+// document.getElementById("p2").textContent = age;
+// document.getElementById("p3").textContent = student;
 
 // let x = 20;
 // let y = "Hello";

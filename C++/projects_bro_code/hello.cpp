@@ -6,12 +6,93 @@
 // typedef int num;
 // using text_t = std::string;
 // using num = int;
-void happy(){
-    std::cout << "Happy Birthday" << '\n';
-  }
+
+
+// double square(double length);
+
+// std::string merge(std::string string1, std::string string2){
+//   return string1 + " " + string2;
+// }
+
+// int num = 2; //Global variables
+
+void showBalance(double balance){
+  std::cout << "Your balance is: $" << balance << '\n';
+};
+double deposit(){
+  return 0;
+};
+double withdraw(double balance){
+  return 0;
+};
+
+
 int main(){
+
+
+  double balance = 0;
+  int choice = 0;
+
+  do
+  {
+    std::cout << "*****************\n";
+    std::cout << "Enter your choice:\n";
+    std::cout << "*****************\n";
+    std::cout << "1.Show Balance\n";
+    std::cout << "2.Deposit Money\n";
+    std::cout << "3.Withdraw Money\n";
+    std::cout << "4.Exit\n";
+    std::cin >> choice;
+
+    switch (choice)
+    {
+    case 1: 
+      showBalance(balance);
+      break;
+    case 2: 
+      balance + deposit();
+      break;
+    case 3: 
+      balance - deposit();
+      break;
+    case 4: 
+      std::cout << "Thank you for your visiting\n";
+      break;
+    default:
+      std::cout << "Invalid\n";
+    }
+  } while (choice != 4);
+  
+ 
+
+
+  // local variables = declared inside a function or block;
+  // Global variables = declared outside of all functions;
+  // int num = 3; //local variables 
+
+
+
+
+  // return
+
+  // double length = 5.0;
+  // double res = square(length);
+  // // std::cout << res << '\n';
+
+  // std::string firstName = "Bro";
+  // std::string lastName = "Code";
+  // std::string fullName = merge(firstName, lastName);
+  // std::cout << fullName << '\n';
+
+
   // function = a block of reusable code
-  happy();
+  
+  // std::string name;
+  // if (name.empty()){
+  //   std::cout << "Enter your name: ";
+  //   std::getline(std::cin, name);
+  // }
+  // std::cout << "Hello " << name; 
 
   // Guess game
   // int num;
@@ -59,7 +140,7 @@ int main(){
   //   std::cout << "Low" << '\n';
   //   break;
   // default:
-  //   break;
+  //   break/* code */;
   // }
 
 
@@ -211,4 +292,9 @@ int main(){
   // std::cout << "I like pizza!" << '\n';
   // std::cout << "It's really good." << std::endl;
   return 0;
+}
+
+double square(double length){
+  double res = length * length;
+  return res;
 }
