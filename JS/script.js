@@ -1,3 +1,47 @@
+// counter program
+const decreaseBtn = document.getElementById("decreaseBtn")
+const resetBtn = document.getElementById("resetBtn")
+const increaseBtn = document.getElementById("increaseBtn")
+const countLable = document.getElementById("countLable")
+let count = 0;
+document.getElementById("resetBtn").onclick = () => {
+  count = 0
+  document.getElementById("countLable").textContent = count;
+}
+increaseBtn.onclick = () => {
+  count++;
+  countLable.textContent = count;
+}
+decreaseBtn.onclick = () => {
+  count--;
+  countLable.textContent = count;
+}
+
+
+
+
+
+
+
+// const = variable that can't be changed.
+// let pi = 3.14159;
+// let radius;
+// let circumference;
+// const PI = 3.14;
+
+// // radius = window.prompt('Enter the radius of a circle:');
+// // radius = Number(radius);
+// // circumference = 2 * pi * radius;
+// // console.log(circumference);
+// document.getElementById("submit").onclick = () => {
+//   let radius = document.getElementById("radius").value;
+//   radius = Number(radius)
+//   circumference = 2 * PI * radius;
+//   document.getElementById("result").textContent = circumference + "cm";
+// }
+
+
+
 // type conversion = change the datatype of a value to another(string, number, booleans)
 // let age = window.prompt("How old are you?")
 // age = Number(age);
