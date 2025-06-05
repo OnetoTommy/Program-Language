@@ -1,25 +1,83 @@
+// Random number generator
+// const min = 50;
+// const max = 100;
+// let randomNum = Math.floor(Math.random() *( max - min)) + min; // 0 to 1
+// console.log(randomNum);
+
+const myButton = document.getElementById("roll");
+const myLabel = document.getElementById("label");
+const min = 1;
+const max = 6;
+let randomNum;
+myButton.onclick = () => {
+  randomNum = Math.floor(Math.random() * max) + min;
+  myLabel.textContent = randomNum;
+}
+
+
+
+
+
+
+// math = built-in object that provides a collection of properties and methods
+
+// let x = 10;
+// let y = 3.78;
+// let z;
+// z = Math.round(x); //四舍五入
+// let i = Math.floor(x); //round down
+// let j = Math.ceil(y); //round up
+// let m = Math.trunc(y); //round down
+// let a = Math.pow(x, 2); //square
+// let b = Math.sqrt(x); //square root
+// let l = Math.log(x); 
+// let s = Math.sin(x);
+// let c = Math.cos(x);
+// let t = Math.tan(x);
+// let abs = Math.abs(x);
+// let sign = Math.sign(x); //negative is -1; positive is 1; 0 is 0
+// let max = Math.max(x, y);
+// let min = Math.min(x, y);
+// let pi = Math.PI;
+// let e = Math.E;
+// console.log(z);
+// console.log(i);
+// console.log(j);
+// console.log(m);
+// console.log(a);
+// console.log(b);
+// console.log(l);
+
+
+
+
+
+
+
+
+
+
+
+
+
 // counter program
-const decreaseBtn = document.getElementById("decreaseBtn")
-const resetBtn = document.getElementById("resetBtn")
-const increaseBtn = document.getElementById("increaseBtn")
-const countLable = document.getElementById("countLable")
-let count = 0;
-document.getElementById("resetBtn").onclick = () => {
-  count = 0
-  document.getElementById("countLable").textContent = count;
-}
-increaseBtn.onclick = () => {
-  count++;
-  countLable.textContent = count;
-}
-decreaseBtn.onclick = () => {
-  count--;
-  countLable.textContent = count;
-}
-
-
-
-
+// const decreaseBtn = document.getElementById("decreaseBtn")
+// const resetBtn = document.getElementById("resetBtn")
+// const increaseBtn = document.getElementById("increaseBtn")
+// const countLable = document.getElementById("countLable")
+// let count = 0;
+// document.getElementById("resetBtn").onclick = () => {
+//   count = 0
+//   document.getElementById("countLable").textContent = count;
+// }
+// increaseBtn.onclick = () => {
+//   count++;
+//   countLable.textContent = count;
+// }
+// decreaseBtn.onclick = () => {
+//   count--;
+//   countLable.textContent = count;
+// }
 
 
 

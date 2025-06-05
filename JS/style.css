@@ -1,4 +1,20 @@
-#countLable{
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+#roll{
+  font-size: 3em;
+  padding: 5px 25px;
+  border-radius: 5px;
+}
+#label{
+  font-size: 3em;
+}
+
+
+
+
+/* #countLable{
   display: block;
   text-align: center;
   font-size: 10rem;
@@ -19,4 +35,4 @@
 .button:hover{
   background-color: aquamarine;
   color: black;
-}
+} */
