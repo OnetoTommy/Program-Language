@@ -1,18 +1,92 @@
+/*
+string method = allow you to manipulate and work with text
+*/
+let userName = "BroCode";
+console.log(userName.charAt(3)); //indentify the character
+console.log(userName.indexOf('o')); //first index value
+console.log(userName.lastIndexOf('o')); //last index
+console.log(userName.length);
+
+let user = "Bro     "
+console.log(user.trim());
+console.log(userName.toLowerCase());
+console.log(userName.toUpperCase());
+console.log(userName.repeat(2));
+let result = userName.startsWith('B'); //true or false
+let result1 = userName.endsWith('B');
+let result2 = userName.includes("B") // true or false
+if(result){
+  console.log("Hello");
+  
+}
+
+let phoneNumber = "123-456-7890";
+phoneNumber = phoneNumber.replaceAll("-", "/")
+console.log(phoneNumber);
+p1 = phoneNumber.padStart(15, "0");
+console.log(p1);
+p2 = phoneNumber.padEnd(15, "0");
+console.log(p2);
+
+
+
+/*
+ternary operator = a shortcut to if{} and else{} statements helps to assign a variable 
+based on a condition 
+condition ? True : False
+*/
+// let age = 10
+// let message = age >= 18 ? "You are an adult" : "You are a minor";
+// console.log(message);
+
+
+
+// .checked = property that determines the checked state of an 
+// HTML checkbox or radio button element
+// const checkbox = document.getElementById("checkbox");
+// const visa = document.getElementById("visa");
+// const mastercard = document.getElementById("mastercard");
+// const paypal = document.getElementById("paypal");
+// const submit = document.getElementById("submit");
+// const result = document.getElementById("result");
+// const payresult = document.getElementById("payresult");
+
+// submit.onclick = () => {
+//   if(checkbox.checked){
+//     result.textContent = "You are subscribe.";
+//   }else{
+//     result.textContent = "You are not subscribe.";
+//   }
+
+//   if(visa.checked){
+//     payresult.textContent = "You are paying with visa.";
+//   }else if (paypal.checked){
+//     payresult.textContent = "You are paying with paypal.";
+//   }else{
+//     payresult.textContent = "You are paying with mastercard.";
+//   }
+// }
+
+
+
+// if statements = if a condition is true, execute some code
+// if not, do sth else
+
 // Random number generator
 // const min = 50;
 // const max = 100;
 // let randomNum = Math.floor(Math.random() *( max - min)) + min; // 0 to 1
 // console.log(randomNum);
 
-const myButton = document.getElementById("roll");
-const myLabel = document.getElementById("label");
-const min = 1;
-const max = 6;
-let randomNum;
-myButton.onclick = () => {
-  randomNum = Math.floor(Math.random() * max) + min;
-  myLabel.textContent = randomNum;
-}
+// const myButton = document.getElementById("roll");
+// const myLabel = document.getElementById("label");
+// const min = 1;
+// const max = 6;
+// let randomNum;
+// myButton.onclick = () => {
+//   randomNum = Math.floor(Math.random() * max) + min;
+//   myLabel.textContent = randomNum;
+// }
 
 
 

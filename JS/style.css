@@ -1,14 +1,15 @@
 body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
+  font-size: 2em;
 }
-#roll{
-  font-size: 3em;
-  padding: 5px 25px;
-  border-radius: 5px;
+#submit{
+  font-size: 1em;
+  background-color: antiquewhite;
+  border:0cap;
+  cursor: pointer;
 }
-#label{
-  font-size: 3em;
+#submit:hover{
+  background-color: aqua;
 }
 
 
