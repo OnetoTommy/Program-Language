@@ -1,32 +1,97 @@
 /*
+while loop and for loop
+while(condition){}
+for(let i = 0; i <= 2; i++){}
+*/
+
+/*
+= assignment operator
+== comparsion operator(compare only value)
+=== strict equality operator(compare value and datatype)
+!= inequality operator
+!== strict inequality operator
+*/
+// const PI = 3.14;
+// if(PI == "3.14"){
+//   console.log("This is pi");
+// }else{
+//   console.log("This is not pi");
+// }
+
+
+
+
+// logical operators = used to combine or manipulate boolean values(True or false)
+/*
+AND = &&
+OR = ||
+NOT = !
+*/
+
+/*
+method chaining = calling one method after another in one continuous line of code
+*/
+
+// // no method chaining
+// let username = window.prompt("Please enter the name");
+// username = username.trim();
+// let letter = username.charAt(0);
+// letter = letter.toUpperCase();
+
+// //method chaining
+// username = username.trim().charAt(0).toUpperCase() + username.trim().charAt(1).toLowerCase(); 
+// console.log(username);
+
+
+
+
+// string slicing = creating a substring form a portion of another string
+// string.slice(start, end)
+// const fullName = "Bro Code";
+// let fistName = fullName.slice(0, 2)
+// console.log(fistName);
+// let lastChar = fullName.slice(-1);
+// let first = fullName.slice(0, fullName.indexOf(" "))
+// console.log(first);
+// let last = fullName.slice(fullName.indexOf(" ") + 1) 
+// console.log(last);
+
+// const email = "Bro@gmail.com";
+// let userName = email.slice(0, email.indexOf("@"));
+// console.log(userName);
+
+
+
+
+/*
 string method = allow you to manipulate and work with text
 */
-let userName = "BroCode";
-console.log(userName.charAt(3)); //indentify the character
-console.log(userName.indexOf('o')); //first index value
-console.log(userName.lastIndexOf('o')); //last index
-console.log(userName.length);
+// let userName = "BroCode";
+// console.log(userName.charAt(3)); //indentify the character
+// console.log(userName.indexOf('o')); //first index value
+// console.log(userName.lastIndexOf('o')); //last index
+// console.log(userName.length);
 
-let user = "Bro     "
-console.log(user.trim());
-console.log(userName.toLowerCase());
-console.log(userName.toUpperCase());
-console.log(userName.repeat(2));
-let result = userName.startsWith('B'); //true or false
-let result1 = userName.endsWith('B');
-let result2 = userName.includes("B") // true or false
-if(result){
-  console.log("Hello");
+// let user = "Bro     "
+// console.log(user.trim());
+// console.log(userName.toLowerCase());
+// console.log(userName.toUpperCase());
+// console.log(userName.repeat(2));
+// let result = userName.startsWith('B'); //true or false
+// let result1 = userName.endsWith('B');
+// let result2 = userName.includes("B") // true or false
+// if(result){
+//   console.log("Hello");
   
-}
+// }
 
-let phoneNumber = "123-456-7890";
-phoneNumber = phoneNumber.replaceAll("-", "/")
-console.log(phoneNumber);
-p1 = phoneNumber.padStart(15, "0");
-console.log(p1);
-p2 = phoneNumber.padEnd(15, "0");
-console.log(p2);
+// let phoneNumber = "123-456-7890";
+// phoneNumber = phoneNumber.replaceAll("-", "/")
+// console.log(phoneNumber);
+// p1 = phoneNumber.padStart(15, "0");
+// console.log(p1);
+// p2 = phoneNumber.padEnd(15, "0");
+// console.log(p2);
 
 
 
