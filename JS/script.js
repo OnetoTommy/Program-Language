@@ -1,4 +1,67 @@
 /*
+function = 
+a section of resuable code 
+declare the function to execute that code
+*/
+function add(x, y){
+  let result = x + y;
+  console.log(result);
+}
+function isEven(number){
+  return number % 2 === 0 ? true : false
+}
+function isValidEmail(email){
+  if(email.includes("@")){
+    return true;
+  }else{
+    return false;
+  }
+}
+add(2, 3);
+console.log(isEven(12));
+console.log(isValidEmail('xinggmail.com'));
+
+
+
+
+/*
+Guess Number Game
+*/
+// const minNum = 50;
+// const maxNum = 100;
+// const answer = Math.floor(Math.random() *(maxNum - minNum + 1) + minNum);
+// console.log(answer);
+// let attempts = 0;
+// let guess;
+// let running = true;
+// while(running){
+//   guess = window.prompt(`Please enter the number from 50 - 100.`);
+//   guess = Number(guess);
+//   if(isNaN(guess)){
+//     window.alert(`Please enter the valid number.`);
+//   }else if (guess > 100 || guess < 50){
+//     window.alert(`Please enter number between ${minNum} and ${maxNum}.`);
+//   }else{
+//     attempts++;
+//     if(guess < answer){
+//       window.alert("Too Low.")
+//     }else if (guess > answer){
+//       window.alert("Too high!")
+//     }else{
+//       window.alert("Congratualtion!")
+//       running = false;
+//     }
+//   }
+  
+
+// }
+
+
+
+
+
+
+/*
 while loop and for loop
 while(condition){}
 for(let i = 0; i <= 2; i++){}
