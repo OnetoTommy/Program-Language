@@ -1,25 +1,83 @@
 /*
+array = a variable like structure that can hold more than 1 value
+*/
+let fruits = ["apple", "banana"];
+// fruits.push("coconut"); //add
+// fruits.pop(); // delete the last element
+// fruits.unshift("mango"); // add the element on the first position
+// fruits.shift(); //delete the first element 
+// console.log(fruits[0]);
+// let numOfFruits = fruits.length;
+// console.log(numOfFruits);
+// let index = fruits.indexOf("apple");
+// console.log(index);
+
+let number = [1, 2, 4, 3, 7, 5]
+fruits.sort();
+number.sort()
+number.reverse();
+// number.sort().reverse();
+
+for(let i = 0; i < fruits.length; i++){
+  console.log(fruits[i]);
+}
+
+for(let i = number.length - 1; i >= 0; i--){
+  console.log(number[i]);
+  
+}
+
+
+
+
+/*
+Temperature conversion program
+*/
+// const temperature = document.getElementById("temperature");
+// const option1 = document.getElementById("option1");
+// const option2 = document.getElementById("option2");
+// const submit = document.getElementById("submit");
+// const result = document.getElementById("result");
+// let temp
+// submit.onclick = () => {
+//   if(option1.checked){
+//     result.textContent = Number(temperature.value).toFixed(2);
+//   }else if (option2.checked){
+//     result.textContent = Number(temperature.value) * 2 + "F";
+//   }else{
+//     result.textContent = "Select a unit."
+//   }
+// }
+
+
+/*
+variable scope = where a variable is recognized and accessible
+local and global
+*/
+
+
+/*
 function = 
 a section of resuable code 
 declare the function to execute that code
 */
-function add(x, y){
-  let result = x + y;
-  console.log(result);
-}
-function isEven(number){
-  return number % 2 === 0 ? true : false
-}
-function isValidEmail(email){
-  if(email.includes("@")){
-    return true;
-  }else{
-    return false;
-  }
-}
-add(2, 3);
-console.log(isEven(12));
-console.log(isValidEmail('xinggmail.com'));
+// function add(x, y){
+//   let result = x + y;
+//   console.log(result);
+// }
+// function isEven(number){
+//   return number % 2 === 0 ? true : false
+// }
+// function isValidEmail(email){
+//   if(email.includes("@")){
+//     return true;
+//   }else{
+//     return false;
+//   }
+// }
+// add(2, 3);
+// console.log(isEven(12));
+// console.log(isValidEmail('xinggmail.com'));
 
 
 
