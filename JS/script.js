@@ -1,31 +1,138 @@
 /*
+Dice roller
+*/
+
+function rollDice(){
+  const numOfDice = document.getElementById("numOfDice").value;
+  const diceResult = document.getElementById("diceResult");
+  const diceImage = document.getElementById("diceImage");
+  const values = [];
+  const images = [];
+
+  for(let i = 0; i < numOfDice; i++){
+    const value = Math.floor(Math.random() * 6) + 1;
+    values.push(value);
+    images.push(`<img src = "dice_images/${value}.png">`)
+  }
+  // console.log(values);
+  diceResult.textContent = `Dice: ${values.join(', ')}`;
+  diceImage.innerHTML = images.join('');
+
+}
+
+
+
+
+/*
+spread operator = ...
+allows an iterable such as an array 
+or string to be expanded into sperate elements
+unpacks the elements
+
+rest parameters = (...rest) allow a function work with a variable 
+number of arguments by bundling them into an array
+
+rest and spread do the opposite 
+spread = expands an array into seperate elements
+rest = bundles seperate elements into array
+*/
+// let numbers = [1, 2, 3, 4, 5];
+// console.log(...numbers); //1 2 3 4 5
+
+// let max = Math.max(...numbers)
+// let min = Math.min(...numbers)
+// let username = "Bro Code";
+// let letters = [...username].join("-");
+// let fruits = ["apple", "banana"];
+// let vegatables = ["carrots", "celery", "potatoes"]
+// // console.log(max);
+// // console.log(min);
+// // console.log(letters);
+// let foods = [...fruits, ...vegatables, "eggs"]; //6) ['apple', 'banana', 'carrots', 'celery', 'potatoes', 'eggs']
+// console.log(foods);
+// console.log(...fruits);
+
+// // rest part
+// const food1 = "pizza0";
+// const food2 = "pizza1";
+// const food3 = "pizza2";
+// const food4 = "pizza3";
+// const food5 = "pizza4";
+
+// function getFood(...foods){
+//   return foods;
+// }
+// const food = getFood(food1, food2, food3);
+// console.log(food);
+// console.log(...food1);
+
+
+// function sum(...numbers){
+//   let result = 0;
+//   for(let number of numbers){
+//     result += number;
+//   }
+//   return result;
+// }
+
+// const total = sum(1, 2, 3);
+// console.log(`Your total is $${total}`);
+
+
+// // combine string
+
+// function combineStrings(...strings){
+//   return strings.join(" ");
+// }
+
+// const fullName = combineStrings("Tom", "Chen");
+// console.log(fullName);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 array = a variable like structure that can hold more than 1 value
 */
-let fruits = ["apple", "banana"];
-// fruits.push("coconut"); //add
-// fruits.pop(); // delete the last element
-// fruits.unshift("mango"); // add the element on the first position
-// fruits.shift(); //delete the first element 
-// console.log(fruits[0]);
-// let numOfFruits = fruits.length;
-// console.log(numOfFruits);
-// let index = fruits.indexOf("apple");
-// console.log(index);
+// let fruits = ["apple", "banana"];
+// // fruits.push("coconut"); //add
+// // fruits.pop(); // delete the last element
+// // fruits.unshift("mango"); // add the element on the first position
+// // fruits.shift(); //delete the first element 
+// // console.log(fruits[0]);
+// // let numOfFruits = fruits.length;
+// // console.log(numOfFruits);
+// // let index = fruits.indexOf("apple");
+// // console.log(index);
 
-let number = [1, 2, 4, 3, 7, 5]
-fruits.sort();
-number.sort()
-number.reverse();
-// number.sort().reverse();
+// let number = [1, 2, 4, 3, 7, 5]
+// fruits.sort();
+// number.sort()
+// number.reverse();
+// // number.sort().reverse();
 
-for(let i = 0; i < fruits.length; i++){
-  console.log(fruits[i]);
-}
+// for(let i = 0; i < fruits.length; i++){
+//   console.log(fruits[i]);
+// }
 
-for(let i = number.length - 1; i >= 0; i--){
-  console.log(number[i]);
+// for(let i = number.length - 1; i >= 0; i--){
+//   console.log(number[i]);
   
-}
+// }
 
 
 
