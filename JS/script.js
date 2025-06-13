@@ -1,26 +1,111 @@
 /*
-Dice roller
+forEach() =
+array.forEach(callback)  element, index, array
+*/
+let nums = [1, 2, 3, 4, 5];
+
+function display(element){
+  console.log(element);
+}
+function double(element, index, array){
+  array[index] = element * 2;
+}
+nums.forEach(double)
+nums.forEach(display);
+
+/*
+callback = a function that is passed as an argument to another function
+1. reading a file
+2. network requests
+3. interacting with databases
 */
 
-function rollDice(){
-  const numOfDice = document.getElementById("numOfDice").value;
-  const diceResult = document.getElementById("diceResult");
-  const diceImage = document.getElementById("diceImage");
-  const values = [];
-  const images = [];
+// function sum(callback, x, y){
+//   let result = x + y;
+//   callback(result);
+// }
 
-  for(let i = 0; i < numOfDice; i++){
-    const value = Math.floor(Math.random() * 6) + 1;
-    values.push(value);
-    images.push(`<img src = "dice_images/${value}.png">`)
-  }
-  // console.log(values);
-  diceResult.textContent = `Dice: ${values.join(', ')}`;
-  diceImage.innerHTML = images.join('');
+// function log(result){
+//   console.log(result);
+// }
 
-}
+// sum(log, 2, 3);
 
 
+// function hello(callback){
+//   console.log("Hello");
+//   callback();
+// }
+// function wait(){
+//   console.log("Wait");
+// }
+// hello(wait)
+
+
+/*
+Random password generator
+*/
+//  function generatePassword(length, lower, upper, number, symbols){
+//   const lowerchars = "abcdefg";
+//   const upperchars = "ABCDEFG";
+//   const numberchars = "0123456789";
+//   const symbolchars = "!@#$%%^&*()";
+//   let allowChars = "";
+//   allowChars += lower ? lowerchars : "";
+//   allowChars += upper ? upperchars : "";
+//   allowChars += number ? numberchars : "";
+//   allowChars += symbols ? symbolchars : "";
+
+//   let password = "";
+
+//   if (length <= 0){
+//     return `(Please password length must be at least 1)`;
+//   }
+//   if(allowChars.length === 0){
+//     return `(At least 1 set of character needs to be selected.)`
+//   }
+//   for(let i = 0; i < length; i++){
+//     let index = Math.floor(Math.random() * allowChars.length);
+//     password += allowChars[index];
+//   }
+//   return password
+// }
+
+// const passwordLength = 12;
+// const lower = true;
+// const upper = true;
+// const number = true;
+// const symbols = true;
+
+// const password = generatePassword(passwordLength,
+//                                   lower,
+//                                   upper,
+//                                   number,
+//                                   symbols);
+
+// console.log(`Password information: ${password}`);
+
+
+/*
+Dice roller
+*/
+// function rollDice(){
+//   const numOfDice = document.getElementById("numOfDice").value;
+//   const diceResult = document.getElementById("diceResult");
+//   const diceImage = document.getElementById("diceImage");
+//   const values = [];
+//   const images = [];
+
+//   for(let i = 0; i < numOfDice; i++){
+//     const value = Math.floor(Math.random() * 6) + 1;
+//     values.push(value);
+//     images.push(`<img src = "dice_images/${value}.png">`)
+//   }
+//   // console.log(values);
+//   diceResult.textContent = `Dice: ${values.join(', ')}`;
+//   diceImage.innerHTML = images.join('');
+
+// }
 
 
 /*
@@ -87,23 +172,6 @@ rest = bundles seperate elements into array
 
 // const fullName = combineStrings("Tom", "Chen");
 // console.log(fullName);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 array = a variable like structure that can hold more than 1 value
