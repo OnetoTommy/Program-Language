@@ -1,17 +1,67 @@
 /*
+.map() = accepts a callback and applies that function to each 
+element of an array, then return a new array
+*/
+// const number = [1, 2, 3, 4, 5];
+// const squares = number.map(square);
+// const cubes = number.map(cube);
+// console.log(squares);
+// console.log(cubes);
+// function square(element){
+//   return Math.pow(element, 2)
+// }
+// function cube(element){
+//   return Math.pow(element, 3)
+// }
+let vegatables = ["carrots", "celery", "potatoes"];
+const toUpperVeg = vegatables.map(upperCase);
+console.log(toUpperVeg);
+function upperCase(element, index, array){
+  return element.toUpperCase();
+}
+
+const dates = ["2024-01-10", "2024-02-10", "2024-03-10", "2024-04-10"];
+const formatDates = dates.map(formatDate)
+console.log(formatDates);
+
+function formatDate(element){
+  const parts = element.split("-");
+  return `${parts[1]}/${parts[2]}/${parts[0]}`
+}
+
+
+
+
+/*
 forEach() =
 array.forEach(callback)  element, index, array
 */
-let nums = [1, 2, 3, 4, 5];
+// let vegatables = ["carrots", "celery", "potatoes"];
+// vegatables.forEach(capitalize);
+// vegatables.forEach(display)
 
-function display(element){
-  console.log(element);
-}
-function double(element, index, array){
-  array[index] = element * 2;
-}
-nums.forEach(double)
-nums.forEach(display);
+// function upperCase(element, index, array){
+//   array[index] = element.toUpperCase();
+// }
+
+// function display(element){
+//   console.log(element);
+// }
+
+// function capitalize(element, index, array){
+//   array[index] = element.charAt(0).toUpperCase() + element.slice(1);
+// }
+
+// let nums = [1, 2, 3, 4, 5];
+
+// function display(element){
+//   console.log(element);
+// }
+// function double(element, index, array){
+//   array[index] = element * 2;
+// }
+// nums.forEach(double)
+// nums.forEach(display);
 
 /*
 callback = a function that is passed as an argument to another function
