@@ -1,7 +1,86 @@
 /*
-function declaration
-function expression
+class = ES6 feature provides a more structured and cleaner way to
+work with objects
 */
+class Product{
+  constructor(name, price){
+    this.name = name;
+    this.price = price;
+  }
+  displayInfor() {
+    console.log(`This ${this.name} is ${this.price}.`)
+  }
+  calculateTotal(salesTax){
+    return this.price + (this.price * salesTax);
+  }
+}
+const product1 = new Product("Shirt", 19.99);
+product1.displayInfor();
+
+console.log(product1.calculateTotal(0.1).toFixed(2));
+
+
+/*
+constructor = special method for defining the properties and methods of objects
+*/
+// function Car(make, model, year, color){
+//   this.make = make;
+//   this.model = model;
+//   this.year = year;
+//   this.color = color
+// }
+// const car1 = new Car("Ford", "Mustang", 2024, "red");
+// console.log(car1.make);
+// console.log(car1.model);
+// console.log(car1.year);
+// console.log(car1.color);
+
+/*
+object = {
+key:value,
+function()
+}
+a collection of related properties and/or methods
+*/
+/*
+this =
+person.name = this.name
+*/
+
+// const person1 = {
+//   name: "Tom Chen",
+//   age: 24,
+//   isStudent: true,
+//   sayHello: function() {console.log(`Hello ${this.name}`)},
+// }
+// const person2 = {
+//   name: "Tom Zhang",
+//   age: 24,
+//   isStudent: true,
+//   sayHello: () => console.log("Hello Zhang"),
+// }
+// // console.log(person1.name);
+// person1.sayHello();
+
+
+
+/*
+arrow functions = () => 
+*/
+// const hello = (name) => console.log(`Hello ${name}`);
+// hello("Tom Chen");
+
+// setTimeout(hello, 3000);
+// function hello(){
+//   console.log("Hell0");
+// }
+// const number = [1, 2, 3, 4, 5];
+// const squares = number.map((element) => Math.pow(element, 2))
+// console.log(squares);
+// const numEven = number.filter((element) => element % 2 === 0)
+// console.log(numEven);
+// const numSum = number.reduce((accumulator, element) => accumulator + element);
+// console.log(numSum);
 
 
 /*
