@@ -1,4 +1,67 @@
 /*
+function declaration
+function expression
+*/
+
+
+/*
+.reduce() = reduce the elements of an array to a single value
+*/
+// const number = [1, 2, 3, 4, 5];
+// const total = number.reduce(sum);
+// const maxNum = number.reduce(getmax);
+// const minNum = number.reduce(getmin);
+// console.log(`$${total.toFixed(2)}`);
+// console.log(`$${maxNum.toFixed(1)}`);
+// console.log(`$${minNum}`);
+
+
+// function getmax(accumulator, element){
+//   return Math.max(accumulator, element);
+// }
+// function getmin(accumulator, element){
+//   return Math.min(accumulator, element);
+// }
+// function sum(accumulator, element){
+//   return accumulator + element;
+// }
+
+
+
+
+/*
+.filter() = creates a new array by filtering out elements
+*/
+// const number = [1, 2, 3, 4, 5];
+// let vegatables = ["carrots", "celery", "potatoes"];
+// let numEven = number.filter(isEven);
+// let numOdd = number.filter(isOdd);
+// let adult = number.filter(isAdult);
+// let shortWord = vegatables.filter(getShortWords);
+// console.log(numEven);
+// console.log(numOdd);
+// console.log(adult);
+// console.log(shortWord);
+
+
+
+// function getShortWords(element){
+//   return element.length > 6;
+// }
+// function isAdult(element){
+//   return element >= 2;
+// }
+
+
+// function isEven(element){
+//   return element % 2 === 0;
+// }
+
+// function isOdd(element){
+//   return element % 2 !== 0;
+// }
+
+/*
 .map() = accepts a callback and applies that function to each 
 element of an array, then return a new array
 */
@@ -13,21 +76,21 @@ element of an array, then return a new array
 // function cube(element){
 //   return Math.pow(element, 3)
 // }
-let vegatables = ["carrots", "celery", "potatoes"];
-const toUpperVeg = vegatables.map(upperCase);
-console.log(toUpperVeg);
-function upperCase(element, index, array){
-  return element.toUpperCase();
-}
+// let vegatables = ["carrots", "celery", "potatoes"];
+// const toUpperVeg = vegatables.map(upperCase);
+// console.log(toUpperVeg);
+// function upperCase(element, index, array){
+//   return element.toUpperCase();
+// }
 
-const dates = ["2024-01-10", "2024-02-10", "2024-03-10", "2024-04-10"];
-const formatDates = dates.map(formatDate)
-console.log(formatDates);
+// const dates = ["2024-01-10", "2024-02-10", "2024-03-10", "2024-04-10"];
+// const formatDates = dates.map(formatDate)
+// console.log(formatDates);
 
-function formatDate(element){
-  const parts = element.split("-");
-  return `${parts[1]}/${parts[2]}/${parts[0]}`
-}
+// function formatDate(element){
+//   const parts = element.split("-");
+//   return `${parts[1]}/${parts[2]}/${parts[0]}`
+// }
 
 
 
