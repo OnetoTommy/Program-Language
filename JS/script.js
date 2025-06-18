@@ -1,23 +1,86 @@
 /*
+inheritance = allows a new class to inherit properties and methods from existing class
+parent -> child
+*/
+class Animal{
+  alive = true;
+  eat(){
+    console.log(`This is ${this.name}`);
+  }
+}
+class Rabbit extends Animal {
+  name = "Rabit";
+}
+const rabbit = new Rabbit();
+console.log(rabbit.alive);
+rabbit.eat();
+
+
+
+
+/*
+static = keyword that defines properties or methods that belong to a class itself
+rather than the objects created from the class
+*/
+// class MathUtil{
+//   static PI = 3.14159;
+//   static getDiameter(r){
+//     return r * 2;
+//   }
+//   static getCircumference(r){
+//     return 2 * this.PI * r;
+//   }
+//   static getArea(r){
+//     return this.PI * Math.pow(r, 2)
+//   }
+// }
+
+// console.log(MathUtil.PI);
+// console.log(MathUtil.getDiameter(2));
+// console.log(MathUtil.getCircumference(3).toFixed(1));
+// console.log(MathUtil.getArea(10));
+
+// class User{
+//   static userCount = 0;
+
+//   constructor(username){
+//     this.user = username; //this 指的是创建对象，如users.username
+//     User.userCount++;
+//   }
+//   static getUserCount(){
+//     console.log(`There are ${User.userCount} users.`);
+    
+//   }
+// }
+// const users = new User("Tom");
+// console.log(users.user);
+// console.log(User.userCount);
+// User.getUserCount();
+
+
+
+
+
+/*
 class = ES6 feature provides a more structured and cleaner way to
 work with objects
 */
-class Product{
-  constructor(name, price){
-    this.name = name;
-    this.price = price;
-  }
-  displayInfor() {
-    console.log(`This ${this.name} is ${this.price}.`)
-  }
-  calculateTotal(salesTax){
-    return this.price + (this.price * salesTax);
-  }
-}
-const product1 = new Product("Shirt", 19.99);
-product1.displayInfor();
+// class Product{
+//   constructor(name, price){
+//     this.name = name;
+//     this.price = price;
+//   }
+//   displayInfor() {
+//     console.log(`This ${this.name} is ${this.price}.`)
+//   }
+//   calculateTotal(salesTax){
+//     return this.price + (this.price * salesTax);
+//   }
+// }
+// const product1 = new Product("Shirt", 19.99);
+// product1.displayInfor();
 
-console.log(product1.calculateTotal(0.1).toFixed(2));
+// console.log(product1.calculateTotal(0.1).toFixed(2));
 
 
 /*
