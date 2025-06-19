@@ -1,19 +1,61 @@
 /*
+super =
+supper = the parent 
+this = this.object
+*/
+class Animal{
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
+  }
+  move(speed){
+    console.log(`${this.name} moves at a speed of ${speed}mph`);
+    
+  }
+
+}
+class Rabit extends Animal{
+  constructor(name, age, runSpeed){
+    super(name, age);
+    this.runSpeed = runSpeed;
+  }
+  run(){
+    console.log(`This is ${this.name}.`);
+    super.move(this.runSpeed)
+    
+  }
+
+}
+class Hawk extends Animal{
+  constructor(name, age, flySpeed){
+    super(name, age);
+    this.flySpeed = flySpeed;
+  }
+}
+const rabbit = new Rabit("rabbit", 1, 25);
+const hawk = new Rabit("hawk", 3, 30);
+console.log(rabbit.name);
+// console.log(rabbit.move(25));
+rabbit.run()
+
+
+
+/*
 inheritance = allows a new class to inherit properties and methods from existing class
 parent -> child
 */
-class Animal{
-  alive = true;
-  eat(){
-    console.log(`This is ${this.name}`);
-  }
-}
-class Rabbit extends Animal {
-  name = "Rabit";
-}
-const rabbit = new Rabbit();
-console.log(rabbit.alive);
-rabbit.eat();
+// class Animal{
+//   alive = true;
+//   eat(){
+//     console.log(`This is ${this.name}`);
+//   }
+// }
+// class Rabbit extends Animal {
+//   name = "Rabit";
+// }
+// const rabbit = new Rabbit();
+// console.log(rabbit.alive);
+// rabbit.eat();
 
 
 
