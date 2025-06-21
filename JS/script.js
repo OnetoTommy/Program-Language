@@ -1,42 +1,201 @@
 /*
+nested objects = objects inside of other objects
+*/
+// const person = {
+//   fullName: "Spongebob Squarepants",
+//   age: 30,
+//   isStudent: true,
+//   hobbies: ["karate", "jellyfishing", "cooking"],
+//   address: {
+//     street: "124 Conch St.",
+//     city: "Bikini Bottom",
+//     country: "Int. Water"
+//   }
+// };
+// // console.log(person.hobbies);
+// // console.log(person.hobbies[0]);
+// // console.log(person.address.street);
+
+// // for(const property in person.address){
+// //   console.log(person.address[property]);
+// // }
+// for(const item in person.hobbies){
+//   console.log(person.hobbies[item]);
+// }
+
+class Person{
+  constructor(name, age, ...address){
+    this.name = name;
+    this.age = age;
+    this.address = new Address(...address);
+  }
+}
+class Address{
+  constructor(street, city, country){
+    this.street = street;
+    this.city = city;
+    this.country = country;
+  }
+}
+const person1 = new Person("Tom", 20, "124 Conch st.", "Hayward", "USA");
+
+
+
+
+// /*
+// destructuring = extract values from arrays and objects 
+// then assign them to variables in a convient way
+// [] = array
+// {} = object
+// */
+
+// /*
+// --------example1--------------
+// swap the value of two variables
+// */
+// // let a = 1;
+// // let b = 2;
+// // let c = 3;
+// // [a, b, c] = [b, c, a];
+// // console.log(c);
+// // /*
+// // --------example1--------------
+// // swap the element in an array
+// // */
+// // const colors = ["red", "green", "blue"];
+// // [colors[0], colors[2]] = [colors[2], colors[0]]
+// // console.log(colors[0]);
+
+// // /*
+// // --------example2--------------
+// // assign array elements to variables
+// // */
+// // const [firstColor, secondColor, ...extractColors] = colors;
+// // console.log(firstColor);
+// /*
+// --------example3--------------
+// extract values from objects
+// */
+// const person1 = {
+//   firstName: "Tom",
+//   lastName: "Chen",
+//   age: 23,
+//   job:"Fry Cook",
+// }
+
+// const person2 = {
+//   firstName: "To1",
+//   lastName: "Che1",
+//   age: 27,
+// }
+// const {firstName, lastName, age, job="Unemployed"} = person2;
+// console.log(firstName);
+// console.log(job);
+// function displayPerson({firstName, lastName, age, job}){
+//   console.log(`name: ${firstName} ${lastName}`);
+// }
+// displayPerson(person1)
+
+
+/*
+getter = special method that makes a property readable
+setter = special method that makes a property writeable
+validate and modify
+*/
+// class Person{
+//   constructor(firstName, lastName, age){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//   }
+//   set firstName(new_FirstName){
+//     if(typeof new_FirstName === "string" && new_FirstName.length > 0){
+//       this._firstName = new_FirstName
+//     }else{
+//       console.error("Please enter the type of string.");
+//     }
+//   }
+//   get firstName(){
+//     return this._firstName
+//   }
+
+//   get fullName(){
+//     return this._firstName + " " + this.lastName
+//   }
+
+// }
+// const person = new Person("Tom", "Chen", "pizza");
+// console.log(person.firstName);
+// console.log(person.lastName);
+// console.log(person.age);
+// console.log(person.fullName);
+
+
+
+
+// class Rectangle{
+//   constructor(width, height){
+//     this.a = width;
+//     this.b = height;
+//   }
+
+//   set a(new_a){
+//     if(new_a > 0){
+//       this._a = new_a
+//     }else{
+//       console.error("Number should be positive.");
+//     }
+//   }
+
+//   get a(){
+//     return this._a;
+//   }
+// }
+// const rectangle = new Rectangle(1000, "pizza");
+// console.log(rectangle.a);
+// console.log(rectangle.b);
+
+
+
+/*
 super =
 supper = the parent 
 this = this.object
 */
-class Animal{
-  constructor(name, age){
-    this.name = name;
-    this.age = age;
-  }
-  move(speed){
-    console.log(`${this.name} moves at a speed of ${speed}mph`);
+// class Animal{
+//   constructor(name, age){
+//     this.name = name;
+//     this.age = age;
+//   }
+//   move(speed){
+//     console.log(`${this.name} moves at a speed of ${speed}mph`);
     
-  }
+//   }
 
-}
-class Rabit extends Animal{
-  constructor(name, age, runSpeed){
-    super(name, age);
-    this.runSpeed = runSpeed;
-  }
-  run(){
-    console.log(`This is ${this.name}.`);
-    super.move(this.runSpeed)
+// }
+// class Rabit extends Animal{
+//   constructor(name, age, runSpeed){
+//     super(name, age);
+//     this.runSpeed = runSpeed;
+//   }
+//   run(){
+//     console.log(`This is ${this.name}.`);
+//     super.move(this.runSpeed)
     
-  }
+//   }
 
-}
-class Hawk extends Animal{
-  constructor(name, age, flySpeed){
-    super(name, age);
-    this.flySpeed = flySpeed;
-  }
-}
-const rabbit = new Rabit("rabbit", 1, 25);
-const hawk = new Rabit("hawk", 3, 30);
-console.log(rabbit.name);
-// console.log(rabbit.move(25));
-rabbit.run()
+// }
+// class Hawk extends Animal{
+//   constructor(name, age, flySpeed){
+//     super(name, age);
+//     this.flySpeed = flySpeed;
+//   }
+// }
+// const rabbit = new Rabit("rabbit", 1, 25);
+// const hawk = new Rabit("hawk", 3, 30);
+// console.log(rabbit.name);
+// // console.log(rabbit.move(25));
+// rabbit.run()
 
 
 
