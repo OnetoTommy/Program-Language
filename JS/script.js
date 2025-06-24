@@ -1,4 +1,39 @@
 /*
+Sort
+*/
+const fruits = [{name:"apple", age:27, color:"red"},
+                {name:"peach", age:28, color:"pink"},
+                {name:"blueberry", age:27, color:"blue"}];
+fruits.sort((a, b) => a.age - b.age);
+console.log(fruits);
+
+
+
+
+/*
+Dictionary
+*/
+// const fruits = [{name:"apple", age:27, color:"red"},
+//                 {name:"peach", age:28, color:"pink"},
+//                 {name:"blueberry", age:27, color:"blue"}];
+
+// console.log(fruits[0].name);
+// fruits.push({name:"berry", age:30, color:"yellow"})
+
+// // console.log(fruits);
+// fruits.forEach(a => console.log(a.name));
+// const names = fruits.map(a => a.name);
+// const yellowFruits = fruits.filter(a =>  a.color === "yellow")  
+// console.log(yellowFruits);
+// const maxAge = fruits.reduce((accumulator, num) => num.age > accumulator.age ? num : accumulator);
+// console.log(maxAge);
+
+// console.log(names);
+
+
+
+
+/*
 nested objects = objects inside of other objects
 */
 // const person = {
@@ -23,21 +58,21 @@ nested objects = objects inside of other objects
 //   console.log(person.hobbies[item]);
 // }
 
-class Person{
-  constructor(name, age, ...address){
-    this.name = name;
-    this.age = age;
-    this.address = new Address(...address);
-  }
-}
-class Address{
-  constructor(street, city, country){
-    this.street = street;
-    this.city = city;
-    this.country = country;
-  }
-}
-const person1 = new Person("Tom", 20, "124 Conch st.", "Hayward", "USA");
+// class Person{
+//   constructor(name, age, ...address){
+//     this.name = name;
+//     this.age = age;
+//     this.address = new Address(...address);
+//   }
+// }
+// class Address{
+//   constructor(street, city, country){
+//     this.street = street;
+//     this.city = city;
+//     this.country = country;
+//   }
+// }
+// const person1 = new Person("Tom", 20, "124 Conch st.", "Hayward", "USA");
 
 
 
