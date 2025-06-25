@@ -1,13 +1,106 @@
 /*
+setTimeout = allows you to schedule the execution of a function after an amount of time
+*/
+
+function updateClock(){
+  const now = new Date();
+  let hours = now.getHours();
+  const meridiem = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12;
+  hours = hours.toString().padStart(2, 0);
+  const minutes = now.getMinutes().toString().padStart(2, 0);
+  const seconds = now.getSeconds().toString().padStart(2, 0);
+  const timeString = `${hours}:${minutes}:${seconds} ${meridiem}`;
+  document.getElementById("clock").textContent = timeString;
+}
+updateClock()
+setInterval(updateClock, 1000);
+
+
+
+// const timeOut = setTimeout(() =>console.log("Hello"), 3000);
+// clearTimeout(timeOut);
+
+// let timeoutId;
+// function startTimer(){
+//   timeoutId = setTimeout(() => window.alert("Hello"), 3000);
+//   console.log("sss");
+  
+// }
+
+// function clearTimer(){
+//   clearTimeout(timeoutId);
+//   console.log("bbb");
+// }
+
+
+
+/*
+closure = a function defined inside of another function,
+the inner function has access to the variables
+*/
+// function game(){
+//   let score = 0;
+
+//   function increaseScore(points){
+//     score += points;
+//     console.log(`+${points}pts`);
+//   }
+
+//   function decreaseScore(points){
+//     score -= points;
+//     console.log(`-${points}pts`);
+//   }
+
+//   function getScore(){
+//     return score;
+//   }
+
+//   return {increaseScore, decreaseScore, getScore}
+// }
+
+// const playGame = game();
+// playGame.increaseScore(5);
+// playGame.decreaseScore(-1);
+// const credits = playGame.getScore();
+// console.log(`${credits}pts`);
+
+
+
+
+/*
+date objects
+Date(year, month, day, hour, minute, second, ms)
+*/
+// const date = new Date(2024, 11, 1, 2, 3, 4, 5);
+// const date = new Date("2024-01-02T12:00:00Z");
+// const date = new Date();
+// const year = date.getFullYear();
+// const month = date.getMonth();
+// const day = date.getDay();
+// const days = date.getDate();
+// const hour = date.getHours();
+// const min = date.getMinutes();
+// const second = date.getSeconds();
+// console.log(year);
+// console.log(days);
+// console.log(hour);
+// console.log(second);
+ 
+// date.setFullYear(2024);
+// date.setMonth(0);
+// date.setDate(12)
+// console.log(date);
+
+
+/*
 Sort
 */
-const fruits = [{name:"apple", age:27, color:"red"},
-                {name:"peach", age:28, color:"pink"},
-                {name:"blueberry", age:27, color:"blue"}];
-fruits.sort((a, b) => a.age - b.age);
-console.log(fruits);
-
-
+// const fruits = [{name:"apple", age:27, color:"red"},
+//                 {name:"peach", age:28, color:"pink"},
+//                 {name:"blueberry", age:27, color:"blue"}];
+// fruits.sort((a, b) => a.age - b.age);
+// console.log(fruits);
 
 
 /*

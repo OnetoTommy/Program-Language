@@ -1,4 +1,25 @@
-#container{
+/* clock */
+body{
+  margin: 0;
+  background-color: aquamarine;
+}
+#clock-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#clock{
+  font-family: monospace;
+  font-size: 6.5rem;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+
+
+/* #container{
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: 2rem;
@@ -34,4 +55,4 @@ input{
 #diceImage{
   width: 150px;
   margin: 5px;
-}
+} */
