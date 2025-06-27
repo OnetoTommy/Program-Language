@@ -1,7 +1,64 @@
 /*
-error
+element selectors
+document.getElementById()
+document.getElementsByClassName()
+document.getElementsByTagName()
+document.querySelector()
+document.querySelectorAll()
 */
+document.getElementsByClassName()
+document.getElementsByTagName()
+document.querySelector()
+document.querySelectorAll()
 
+/*
+calculator
+*/
+const display = document.getElementById("display");
+function appendToDisplay(input){
+  display.value  += input;
+}
+
+function clearDisplay(){
+  display.value = "";
+}
+
+function calculate(){
+  try {
+    display.value = eval(display.value)
+  } catch (error) {
+    display.value = "Error"
+  }
+  
+}
+
+/*
+error
+try = cause an error
+catch = throw errors
+finally = always executes
+*/
+// try{
+//   // const dividend = Number(window.prompt("Enter a dividend: "))
+//   // const divisor = Number(window.prompt("Enter a divisor: "))
+//   if(divisor === 0 ){
+//     throw new Error("You can't divide by zero.")
+//   }
+//   if(isNaN(dividend) || isNaN(divisor)){
+//     throw new Error("Values must be a number.")
+//   }
+
+//   const result = dividend / divisor;
+//   console.log(result);
+
+// }
+// catch(error){
+//   console.error(error)
+// }
+// finally{
+//   console.log("Hello World!");
+  
+// }
 
 
 
