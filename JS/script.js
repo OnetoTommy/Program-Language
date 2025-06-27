@@ -1,52 +1,91 @@
 /*
+error
+*/
+
+
+
+
+/*
+synchronous
+
+asynchronous
+*/
+
+// function func01(callback){
+//   setTimeout(() => {console.log("Task01");
+//                     callback()}, 3000);
+// }
+// function func02(){
+//   console.log("Task02");
+//   console.log("Task03");
+//   console.log("Task04");
+// }
+// func01(func02)
+
+/*
+ES6 module = an external file that contains reusable code that can be imported into other js files
+*/
+// import {PI, getArea, getCircumference, getVolume} from './mathUtil.js'
+// console.log(PI);
+// const circumference = getCircumference(10).toFixed(2);
+// const area = getArea(10).toFixed(2);
+// const volume = getVolume(10).toFixed(3);
+// console.log(circumference);
+// console.log(volume);
+// console.log(area);
+
+
+
+/*
 StopWatch
 */
-const display = document.getElementById("display");
-let timer = null;
-let startTime = 0;
-let elapseTime = 0;
-let isRunning = false;
+// const display = document.getElementById("display");
+// let timer = null;
+// let startTime = 0;
+// let elapseTime = 0;
+// let isRunning = false;
 
-function start(){
-  if(!isRunning){
-    startTime = Date.now() - elapseTime;
-    timer = setInterval(update, 10);
-    isRunning = true;
-  }
+// function start(){
+//   if(!isRunning){
+//     startTime = Date.now() - elapseTime;
+//     timer = setInterval(update, 10);
+//     isRunning = true;
+//   }
 
-}
-function stop(){
-  if(isRunning){
-    clearInterval(timer)
-    elapseTime = Date.now() - startTime;
-    isRunning = false;
-  }
-}
+// }
+// function stop(){
+//   if(isRunning){
+//     clearInterval(timer)
+//     elapseTime = Date.now() - startTime;
+//     isRunning = false;
+//   }
+// }
 
-function reset(){
-  clearInterval(timer)
-  startTime = 0;
-  elapseTime = 0;
-  isRunning = false;
-  display.textContent = "00:00:00:00"
+// function reset(){
+//   clearInterval(timer)
+//   startTime = 0;
+//   elapseTime = 0;
+//   isRunning = false;
+//   display.textContent = "00:00:00:00"
 
-}
-function update(){
-  const currentTime = Date.now();
-  elapseTime = currentTime - startTime;
+// }
+// function update(){
+  
+//   const currentTime = Date.now();
+//   elapseTime = currentTime - startTime;
 
-  let hours = Math.floor(elapseTime / (1000 * 60 * 60));
-  let minutes = Math.floor(elapseTime / (1000 * 60) % 60);
-  let seconds = Math.floor(elapseTime / (1000) % 60);
-  let milliseconds = Math.floor(elapseTime % 1000 / 10);
-  hours = String(hours).padStart(2, "0");
-  minutes = String(minutes).padStart(2, "0");
-  seconds = String(seconds).padStart(2, "0");
-  milliseconds = String(milliseconds).padStart(2, "0");
+//   let hours = Math.floor(elapseTime / (1000 * 60 * 60));
+//   let minutes = Math.floor(elapseTime / (1000 * 60) % 60);
+//   let seconds = Math.floor(elapseTime / (1000) % 60);
+//   let milliseconds = Math.floor(elapseTime % 1000 / 10);
+//   hours = String(hours).padStart(2, "0");
+//   minutes = String(minutes).padStart(2, "0");
+//   seconds = String(seconds).padStart(2, "0");
+//   milliseconds = String(milliseconds).padStart(2, "0");
 
-  display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
+//   display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
 
-}
+// }
 
 
 
