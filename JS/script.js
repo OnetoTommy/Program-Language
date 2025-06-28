@@ -1,15 +1,49 @@
 /*
-element selectors
-document.getElementById()
-document.getElementsByClassName()
-document.getElementsByTagName()
-document.querySelector()
-document.querySelectorAll()
+DOM navigation 
+
+.firstElementChild
+.lastElementChild
+.nextElementChild
+.previousElementChild
+.parentElementChild
+.children
 */
-document.getElementsByClassName()
-document.getElementsByTagName()
-document.querySelector()
-document.querySelectorAll()
+
+// const element = document.getElementById("fruits");
+// const firstChild = element.firstElementChild;
+// firstChild.style.backgroundColor = "yellow";
+
+const element = document.querySelectorAll("ul");
+
+element.forEach(e => {
+  const firstChild = e.firstElementChild;
+  firstChild.style.backgroundColor = "yellow";
+})
+
+
+/*
+element selectors
+document.getElementById()  
+document.getElementsByClassName()  HTML COLLECTION
+document.getElementsByTagName() HTML COLLECTION
+document.querySelector() First element or null
+document.querySelectorAll() all elements or null
+*/
+
+// const h4 = document.getElementsByTagName("h4");
+
+// for(let h of h4){
+//   h.style.backgroundColor = "yellow"
+// }
+// h4[1].style.backgroundColor = "lightgreen"
+
+// Array.from(h4).forEach(h => {
+//   h.style.backgroundColor = "red";
+// })
+
+// const element = document.querySelector(".fruits")
+// element.style.backgroundColor = "lightgreen";
+
 
 /*
 calculator
