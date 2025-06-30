@@ -1,4 +1,38 @@
 /*
+example 01
+step 1 create the element
+step 2 add attributes/properties
+step 3 append element to DOM
+Remove html element
+*/
+// const newH1 = document.createElement("h1");
+// newH1.textContent = "I like Pizza!";
+// newH1.id = "myH1";
+// newH1.style.color = "tomato"
+// // document.body.append(newH1);
+// // document.body.prepend(newH1);
+// document.getElementById("box1").append(newH1);
+// // document.getElementById("box1").prepend(newH1);
+// // const box2 = document.getElementById("box2");
+// // document.body.insertBefore(newH1, box2);
+
+// // const boxes = document.querySelectorAll(".box");
+// // document.body.insertBefore(newH1, boxes[2]);
+
+// document.getElementById("box1").removeChild(newH1);
+
+
+// step 1
+const newListItem = document.createElement("li");
+newListItem.textContent = "coconut";
+newListItem.id = "Coconut";
+newListItem.style.fontWeight = "bold";
+newListItem.style.backgroundColor = "lightgreen";
+// step 2 add element
+// document.body.append(newListItem);
+document.getElementById("fruits").append(newListItem)
+
+/*
 DOM navigation 
 
 .firstElementChild
@@ -13,12 +47,12 @@ DOM navigation
 // const firstChild = element.firstElementChild;
 // firstChild.style.backgroundColor = "yellow";
 
-const element = document.querySelectorAll("ul");
+// const element = document.querySelectorAll("ul");
 
-element.forEach(e => {
-  const firstChild = e.firstElementChild;
-  firstChild.style.backgroundColor = "yellow";
-})
+// element.forEach(e => {
+//   const firstChild = e.firstElementChild;
+//   firstChild.style.backgroundColor = "yellow";
+// })
 
 
 /*
