@@ -1,4 +1,67 @@
 /*
+ddEventListener includes click/mouseover/mouseout
+
+keydown/keyup
+*/
+// const btn = document.getElementById("myBox");
+// btn.addEventListener("click", event => {
+//   event.target.style.backgroundColor = "lightgreen";
+//   event.target.textContent = "Hello World!"
+// })
+// btn.addEventListener("mouseover", event => {
+//   event.target.style.backgroundColor = "red";
+//   event.target.textContent = "Hello Tom"
+// })
+// btn.addEventListener("mouseout", event => {
+//   event.target.style.backgroundColor = "yellow";
+//   event.target.textContent = "Hello Chen"
+// })
+// function changeColor(event){
+//   console.log(event);
+  
+// }
+// btn.addEventListener("click", changeColor);
+
+const myBox = document.getElementById("myBox");
+
+// document.addEventListener("keydown", event => {
+//   myBox.textContent = "Hello";
+//   myBox.style.backgroundColor = "tomato";
+
+// })
+// document.addEventListener("keyup", event => {
+//   myBox.textContent = "Hi";
+//   myBox.style.backgroundColor = "blue";
+// })
+const cnt = 10;
+let x = 0;
+let y = 0;
+
+document.addEventListener("keydown", event => {
+  if(event.key.startsWith("Arrow")){
+
+    switch (event.key) {
+      case "ArrowUp":
+        y -= cnt
+        break;
+      case "ArrowDown":
+        y += cnt
+        break;
+      case "ArrowLeft":
+        x -= cnt
+        break;
+      case "ArrowRight":
+        x += cnt
+        break;
+    }
+  }
+
+  myBox.style.top = `${y}px`;
+  myBox.style.left = `${x}px`;
+})
+
+
+/*
 example 01
 step 1 create the element
 step 2 add attributes/properties
@@ -22,15 +85,15 @@ Remove html element
 // document.getElementById("box1").removeChild(newH1);
 
 
-// step 1
-const newListItem = document.createElement("li");
-newListItem.textContent = "coconut";
-newListItem.id = "Coconut";
-newListItem.style.fontWeight = "bold";
-newListItem.style.backgroundColor = "lightgreen";
-// step 2 add element
-// document.body.append(newListItem);
-document.getElementById("fruits").append(newListItem)
+// // step 1
+// const newListItem = document.createElement("li");
+// newListItem.textContent = "coconut";
+// newListItem.id = "Coconut";
+// newListItem.style.fontWeight = "bold";
+// newListItem.style.backgroundColor = "lightgreen";
+// // step 2 add element
+// // document.body.append(newListItem);
+// document.getElementById("fruits").append(newListItem)
 
 /*
 DOM navigation 
