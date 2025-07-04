@@ -1,4 +1,57 @@
 /*
+classList
+
+add()
+remove()
+toggle()
+replace(old, new)
+contains()
+*/
+const btn = document.getElementById("btn");
+// btn.classList.add("new")
+
+btn.addEventListener("click", event => {
+  event.target.classList.add("new");
+})
+
+/*
+NodeList
+*/
+// let btns = document.querySelectorAll(".btn");
+
+// // btns.forEach(btn => {
+// //   btn.style.backgroundColor = "green";
+// // })
+
+// btns.forEach(btn => {
+//   btn.addEventListener("click", event => {
+//     event.target.style.backgroundColor = "red";
+//   })
+// })
+
+// const newBtn = document.createElement("button");
+// newBtn.textContent = "Button5";
+// newBtn.classList = "btn";
+// document.body.appendChild(newBtn)
+
+/*
+hide img
+*/
+// const btn = document.getElementById("btn");
+// const img = document.getElementById("myImg");
+
+// btn.addEventListener("click", event => {
+//   if (img.style.visibility === "hidden"){
+//     img.style.visibility = "visible";
+//     btn.textContent = "Hide";
+//   }else{
+//     img.style.visibility = "hidden";
+//     btn.textContent = "Show";
+//   }
+// })
+
+
+/*
 ddEventListener includes click/mouseover/mouseout
 
 keydown/keyup
@@ -22,43 +75,43 @@ keydown/keyup
 // }
 // btn.addEventListener("click", changeColor);
 
-const myBox = document.getElementById("myBox");
+// const myBox = document.getElementById("myBox");
+
+// // document.addEventListener("keydown", event => {
+// //   myBox.textContent = "Hello";
+// //   myBox.style.backgroundColor = "tomato";
+
+// // })
+// // document.addEventListener("keyup", event => {
+// //   myBox.textContent = "Hi";
+// //   myBox.style.backgroundColor = "blue";
+// // })
+// const cnt = 10;
+// let x = 0;
+// let y = 0;
 
 // document.addEventListener("keydown", event => {
-//   myBox.textContent = "Hello";
-//   myBox.style.backgroundColor = "tomato";
+//   if(event.key.startsWith("Arrow")){
 
+//     switch (event.key) {
+//       case "ArrowUp":
+//         y -= cnt
+//         break;
+//       case "ArrowDown":
+//         y += cnt
+//         break;
+//       case "ArrowLeft":
+//         x -= cnt
+//         break;
+//       case "ArrowRight":
+//         x += cnt
+//         break;
+//     }
+//   }
+
+//   myBox.style.top = `${y}px`;
+//   myBox.style.left = `${x}px`;
 // })
-// document.addEventListener("keyup", event => {
-//   myBox.textContent = "Hi";
-//   myBox.style.backgroundColor = "blue";
-// })
-const cnt = 10;
-let x = 0;
-let y = 0;
-
-document.addEventListener("keydown", event => {
-  if(event.key.startsWith("Arrow")){
-
-    switch (event.key) {
-      case "ArrowUp":
-        y -= cnt
-        break;
-      case "ArrowDown":
-        y += cnt
-        break;
-      case "ArrowLeft":
-        x -= cnt
-        break;
-      case "ArrowRight":
-        x += cnt
-        break;
-    }
-  }
-
-  myBox.style.top = `${y}px`;
-  myBox.style.left = `${x}px`;
-})
 
 
 /*

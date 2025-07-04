@@ -1,7 +1,18 @@
 body{
   margin: 0;
 }
-#myBox{
+#btn{
+  color: white;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+.new{
+  background-color: aqua;
+  font-size: 4rem;
+}
+/* #myBox{
   background-color: lightblue;
   width: 300px;
   height: 200px;
@@ -10,7 +21,7 @@ body{
   justify-content: center;
   align-items: center;
   position: relative;
-}
+} */
 
 
 
