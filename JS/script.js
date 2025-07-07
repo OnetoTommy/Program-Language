@@ -1,4 +1,40 @@
 /*
+Rock paper scissors
+*/
+const choices = ["rock", "paper", "scissors"];
+const playerDisplay = document.getElementById("playerDisplay");
+const computerDisplay = document.getElementById("computerDisplay");
+const resultDisplay = document.getElementById("resultDisplay");
+
+function playGame(element){
+
+  const choice = choices[Math.floor(Math.random() * 3)];
+  let res = "";
+  if(element === choice){
+    res = "It's a tie!"
+  }
+  else{
+    switch (element) {
+      case "rock":
+        res = (choice === "scissors") ? "You win!" : "You'lost!"
+        break;
+      case "paper":
+        res = (choice === "rock") ? "You win!" : "You'lost!"
+        break;
+      case "scissors":
+        res = (choice === "paper") ? "You win!" : "You'lost!"
+        break;
+      default:
+        break;
+    }
+  }
+  playerDisplay.textContent = `Player: ${element}`
+  computerDisplay.textContent = `Computer: ${choice}`
+  resultDisplay.textContent = `Result: ${res}`
+}
+
+
+/*
 classList
 
 add()
@@ -7,12 +43,12 @@ toggle()
 replace(old, new)
 contains()
 */
-const btn = document.getElementById("btn");
-// btn.classList.add("new")
+// const btn = document.getElementById("btn");
+// // btn.classList.add("new")
 
-btn.addEventListener("click", event => {
-  event.target.classList.add("new");
-})
+// btn.addEventListener("click", event => {
+//   event.target.classList.add("new");
+// })
 
 /*
 NodeList
