@@ -1,37 +1,141 @@
 /*
+Slider
+*/
+const slides = document.querySelectorAll(".slides img")
+// console.log(slides);
+let slideIndex = 0;
+// let intervalId = null;
+
+document.addEventListener("DOMContentLoaded", initializeSlider)
+
+function initializeSlider(){
+  if(slides.length > 0){
+    slides[slideIndex].classList.add("displaySlide")
+  // intervalId = setInterval(nextSlide, 5000)
+  } 
+  
+}
+
+function showSlide(index){
+  if(index >= slides.length){
+    slideIndex = 0;
+  }
+  else if(index < 0){
+    slideIndex = slides.length - 1;
+  }
+
+  slides.forEach(slide => {
+    slide.classList.remove("displaySlide");
+  })
+  slides[slideIndex].classList.add("displaySlide");
+}
+
+function prevSlide(){
+  slideIndex--;
+  showSlide(slideIndex);
+}
+
+function nextSlide(){
+  slideIndex++;
+  showSlide(slideIndex);
+}
+
+// const slides = document.querySelectorAll(".slides img")
+// let slideIndex = 0;
+// let intervalId = null;
+
+// // initializeSlider()
+// document.addEventListener("DOMContentLoaded", initializeSlider)
+
+// function initializeSlider(){
+//   if(slides.length > 0){
+//     slides[slideIndex].classList.add("displaySlide")
+//     intervalId = setInterval(nextSlide, 5000)
+//   }
+// }
+// function showSlide(index){
+
+//   if (index >= slides.length) {
+//     slideIndex = 0;
+//   }
+//   else if (index < 0){
+//     slideIndex = slides.length - 1;
+//   }
+//   slides.forEach(slide => {
+//     slide.classList.remove("displaySlide");
+//   })
+//   slides[slideIndex].classList.add("displaySlide");
+// }
+
+// function prevSlide(){
+//   clearInterval(intervalId)
+//   slideIndex--;
+//   showSlide(slideIndex);
+// }
+
+// function nextSlide(){
+//   slideIndex++;
+//   showSlide(slideIndex);
+// }
+
+
+
+/*
 Rock paper scissors
 */
-const choices = ["rock", "paper", "scissors"];
-const playerDisplay = document.getElementById("playerDisplay");
-const computerDisplay = document.getElementById("computerDisplay");
-const resultDisplay = document.getElementById("resultDisplay");
+// const choices = ["rock", "paper", "scissors"];
+// const playerDisplay = document.getElementById("playerDisplay");
+// const computerDisplay = document.getElementById("computerDisplay");
+// const resultDisplay = document.getElementById("resultDisplay");
+// const playerScore = document.getElementById("playScore")
+// const computerScore = document.getElementById("computerScore")
+// let playScore = 0;
+// let computScore = 0;
 
-function playGame(element){
+// function playGame(element){
 
-  const choice = choices[Math.floor(Math.random() * 3)];
-  let res = "";
-  if(element === choice){
-    res = "It's a tie!"
-  }
-  else{
-    switch (element) {
-      case "rock":
-        res = (choice === "scissors") ? "You win!" : "You'lost!"
-        break;
-      case "paper":
-        res = (choice === "rock") ? "You win!" : "You'lost!"
-        break;
-      case "scissors":
-        res = (choice === "paper") ? "You win!" : "You'lost!"
-        break;
-      default:
-        break;
-    }
-  }
-  playerDisplay.textContent = `Player: ${element}`
-  computerDisplay.textContent = `Computer: ${choice}`
-  resultDisplay.textContent = `Result: ${res}`
-}
+//   const choice = choices[Math.floor(Math.random() * 3)];
+//   let res = "";
+//   if(element === choice){
+//     res = "It's a tie!"
+//   }
+//   else{
+//     switch (element) {
+//       case "rock":
+//         res = (choice === "scissors") ? "You win!" : "You'lost!"
+//         break;
+//       case "paper":
+//         res = (choice === "rock") ? "You win!" : "You'lost!"
+//         break;
+//       case "scissors":
+//         res = (choice === "paper") ? "You win!" : "You'lost!"
+//         break;
+//       default:
+//         break;
+//     }
+//   }
+//   playerDisplay.textContent = `Player: ${element}`
+//   computerDisplay.textContent = `Computer: ${choice}`
+//   resultDisplay.textContent = `Result: ${res}`
+
+//   resultDisplay.classList.remove("greenText", "redText")
+
+//   switch (res) {
+//   case "You win!":
+//     resultDisplay.classList.add("greenText");
+//     playScore++;
+//     playerScore.textContent = playScore
+//     break;
+//   case "You'lost!":
+//     resultDisplay.classList.add("redText");
+//     computScore++;
+//     computerScore.textContent = computScore
+//     break;
+
+//  }
+// }
+
+
 
 
 /*
