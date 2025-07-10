@@ -1,44 +1,340 @@
 /*
+fetch for weather
+*/
+// WEATHER APP
+
+const weatherForm = document.querySelector(".weatherForm");
+const cityInput = document.querySelector(".cityInput");
+const card = document.querySelector(".card");
+const apiKey = "d498fc58320ff0935a20ad97ac54674a";
+
+weatherForm.addEventListener("submit", async event => {
+
+  event.preventDefault();
+  const city = cityInput.value;
+
+  if(city){
+
+    try {
+      const weatherData = await getWeatherData(city);
+      displayWeatherInfo(weatherData);
+
+
+    } catch (error) {
+      console.error(error);
+      displayError("Please enter a city.")
+    }
+  }
+  else{
+    displayError("Please enter a city.")
+  }
+
+});
+
+async function getWeatherData(city) {
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  const response = await fetch(apiUrl);
+  if(!response.ok){
+    throw new Error("Could not fetch weather data.")
+  }
+  return await response.json()
+}
+
+function displayWeatherInfo(data){
+  const {name: city, 
+         main: {temp, humidity}, 
+         weather:[{description, id}]} = data;
+  card.textContent = "";
+card.style.display = "flex";
+const cityDisplay = document.createElement("h1");
+const tempDisplay = document.createElement("p");
+const humidityDisplay = document.createElement("p");
+const descDisplay = document.createElement("p");
+const weatherEmoji = document.createElement("p");
+
+cityDisplay.textContent = city;
+tempDisplay.textContent = `${(temp - 273.15).toFixed(1)}°C` //shift + option + 8
+humidityDisplay.textContent = `Humidity: ${humidity}`;
+descDisplay.textContent = description;
+weatherEmoji.textContent = getWeatherEmoji(id);
+
+cityDisplay.classList.add("cityDisplay");
+cityDisplay.classList.add("tempDisplay");
+humidityDisplay.classList.add("humidityDisplay");
+descDisplay.classList.add("descDisplay");
+weatherEmoji.classList.add("weatherEmoji")
+
+card.appendChild(cityDisplay);
+card.appendChild(tempDisplay);
+card.appendChild(humidityDisplay);
+card.appendChild(descDisplay);
+card.appendChild(weatherEmoji);
+}
+
+function getWeatherEmoji(weatherId){
+  switch (true) {
+    case (weatherId >= 200 && weatherId < 300):
+      return "1"
+      break;
+    case (weatherId >= 300 && weatherId < 400):
+      return "2"
+      break;
+      case (weatherId >= 400 && weatherId < 500):
+      return "3"
+      break;
+  
+    default:
+      return "?"
+      break;
+  }
+}
+
+function displayError(message){
+  const errorDisplay = document.createElement("p");
+  errorDisplay.textContent = message;
+  errorDisplay.classList.add("errorDisplay")
+  card.textContent = ""
+  card.style.display = "flex";
+  card.appendChild(errorDisplay);
+}
+
+
+
+
+
+
+/*
+fetch = function used for making HTTP requests to fetch resources.
+JSON style data, images, files
+fetch(url, {options})
+*/
+
+// fetchData()
+// async function fetchData() {
+
+//   try {
+    
+//     const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+//     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+//     if(!response.ok){
+//       return new Error("Could not fetch data.")}
+//     const data = await response.json()
+//     // console.log(data);
+    
+//     const img = data.sprites.front_default;
+//     const imgShow = document.getElementById("pokemonImg");
+//     imgShow.src = img;
+//     imgShow.style.display = "block";
+    
+//   } catch (error) {
+//     console.error(error);
+    
+//   }
+  
+// }
+
+
+// fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+//   .then(response => {
+//     if(!response.ok){
+//       throw new Error("Could not fetch resource")
+//     }
+//     return response.json();
+//   })
+//   .then(data => console.log(data))
+//   .catch(error => console.error(error))
+
+
+/*
+JSON = data-interchange format
+used for exchanging data between a server and a web application
+JSON files: {key:val} or [val1, val2, val3]
+JSON.stringify() = converts a js object to a JSON string
+JSON.parse() = converts a JSON string to a JS object
+*/
+
+// fetch("person.json")
+//   .then(response => response.json())
+//   .then(values => values.forEach(value => console.log(value.name)))
+//   .catch(error => console.log(error))
+
+
+/*
+async/Await =
+
+Async makes a function return a promise
+Await makes an async function wait for a promise
+*/
+// function walkDog() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const isTrue = true;
+//       if (isTrue) {
+//         resolve("You walk the dog.");
+//       }
+//       else{
+//         reject("You didn't walk.")
+//       }
+//     }, 1500)
+//   })
+// }
+
+// function cleanKitchen() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("You clean the Kitchen.");
+//     }, 1500)
+//   })
+// }
+
+// function takeOutTrash() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("You take Out Trash.");
+//     }, 1500)
+//   })
+// }
+
+// async function doChores() {
+//   try {
+//     const walkDogResult = await walkDog();
+//     console.log(walkDogResult);
+//   } catch (error) {
+//     console.log(error);
+    
+//   }
+// }
+
+// doChores()
+
+// walkDog().then(value => {console.log(value); return cleanKitchen()})
+//           .then(value => {console.log(value); return takeOutTrash()})
+//           .then(value => {console.log(value); console.log("You're done.")})
+//           .catch(error => console.log(error));
+
+
+
+/*
+Promise = 
+new Promise((resolve, reject) => {asynchronous code})
+*/
+
+// Do these chores in order
+//1. Walk the dog
+//2. Clean the kitchen
+//3. Take out the trash
+
+//How to write to use Promise
+// function walkDog() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const isTrue = false;
+//       if (isTrue) {
+//         resolve("You walk the dog.");
+//       }
+//       else{
+//         reject("You didn't walk.")
+//       }
+      
+//     }, 1500)
+//   })
+// }
+
+// function cleanKitchen() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("You clean the Kitchen.");
+//     }, 1500)
+//   })
+// }
+
+// function takeOutTrash() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("You take Out Trash.");
+//     }, 1500)
+//   })
+// }
+
+// walkDog().then(value => {console.log(value); return cleanKitchen()})
+//           .then(value => {console.log(value); return takeOutTrash()})
+//           .then(value => {console.log(value); console.log("You're done.")})
+//           .catch(error => console.log(error));
+
+
+
+
+// Callback method
+// function walkDog(callback) {
+//   setTimeout(() => {
+//     console.log("You walk the dog.");
+//     callback();
+//   }, 1500);
+// }
+
+// function cleanKitchen(callback) {
+//   setTimeout(() => {
+//     console.log("You clean the kitchen.");
+//     callback();
+//   }, 2000);
+// }
+
+// function takeOutTrash(callback) {
+//   setTimeout(() => {
+//     console.log("You take out the trash.");
+//     callback();
+//   }, 500);
+// }
+
+// walkDog(() => {
+//   cleanKitchen(() => {
+//     takeOutTrash(() => console.log("You're done."));
+//   })
+// })
+
+
+
+/*
 Slider
 */
-const slides = document.querySelectorAll(".slides img")
-// console.log(slides);
-let slideIndex = 0;
-// let intervalId = null;
+// const slides = document.querySelectorAll(".slides img")
+// // console.log(slides);
+// let slideIndex = 0;
+// // let intervalId = null;
 
-document.addEventListener("DOMContentLoaded", initializeSlider)
+// document.addEventListener("DOMContentLoaded", initializeSlider)
 
-function initializeSlider(){
-  if(slides.length > 0){
-    slides[slideIndex].classList.add("displaySlide")
-  // intervalId = setInterval(nextSlide, 5000)
-  } 
+// function initializeSlider(){
+//   if(slides.length > 0){
+//     slides[slideIndex].classList.add("displaySlide")
+//   // intervalId = setInterval(nextSlide, 5000)
+//   } 
   
-}
+// }
 
-function showSlide(index){
-  if(index >= slides.length){
-    slideIndex = 0;
-  }
-  else if(index < 0){
-    slideIndex = slides.length - 1;
-  }
+// function showSlide(index){
+//   if(index >= slides.length){
+//     slideIndex = 0;
+//   }
+//   else if(index < 0){
+//     slideIndex = slides.length - 1;
+//   }
 
-  slides.forEach(slide => {
-    slide.classList.remove("displaySlide");
-  })
-  slides[slideIndex].classList.add("displaySlide");
-}
+//   slides.forEach(slide => {
+//     slide.classList.remove("displaySlide");
+//   })
+//   slides[slideIndex].classList.add("displaySlide");
+// }
 
-function prevSlide(){
-  slideIndex--;
-  showSlide(slideIndex);
-}
+// function prevSlide(){
+//   slideIndex--;
+//   showSlide(slideIndex);
+// }
 
-function nextSlide(){
-  slideIndex++;
-  showSlide(slideIndex);
-}
+// function nextSlide(){
+//   slideIndex++;
+//   showSlide(slideIndex);
+// }
 
 // const slides = document.querySelectorAll(".slides img")
 // let slideIndex = 0;
